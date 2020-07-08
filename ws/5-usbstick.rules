@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYSTEM=="usb", RUN=="/home/pi/utils/shell/conn.sh"
+ACTION=="remove", SUBSYSTEM=="usb", RUN=="/home/pi/utils/shell/disc.sh"

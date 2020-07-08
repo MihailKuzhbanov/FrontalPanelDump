@@ -1,0 +1,37 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+  compatible = "brcm, bcm2708";
+
+  fragment@0 {
+    target = <&gpio>;
+    __overlay__ {
+      ssd2543_pins: ssd2543_pins {
+        brcm,pins = <43 44>;
+        brcm,function = <0 0>;
+        brcm,pull = <2 2>;
+      };
+    };
+  };
+
+  fragment@1 {
+    target = <&i2c0>;
+    __overlay__ {
+      #address-cells = <1>;
+      #size-cells = <0>;
+      status = "okay";
+
+      ssd2543: ssd2543@48 {
+        compatible = "ssd2543";
+        reg = <0x48>;
+        pinctrl-names = "default";
+        pinctrl-0 = <&ssd2543_pins>;
+        interrupt-parent = <&gpio>;
+        interrupts = <43 2>;
+        irq-gpios = <&gpio 43 0>;
+        reset-gpios = <&gpio 44 0>;
+      };
+    };
+  };
+};

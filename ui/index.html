@@ -1,0 +1,100 @@
+<!-- The grid: three columns -->
+<script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<button class="tablink" onclick="openPage('Home', this, 'darkcyan')">Конфиг</button>
+<button class="tablink" onclick="openPage('News', this, 'darkcyan')" id="defaultOpen">Мануал</button>
+<button class="tablink" onclick="openPage('Contact', this, 'darkcyan')">Сапорт</button>
+<button class="tablink" onclick=myFunction()>Дарк</button>
+
+<div id="Home" class="tabcontent">
+  <h3>Конфигурация</h3>
+  <button class="accordion" onclick="openPanel()">Section 1</button>
+<div class="panel">
+  <button class="button">Button 1</button>
+  <button class="button">Button 2</button>
+  <button class="button">Button 3</button>
+  <button class="button">Button 4</button>
+  <button class="button">Button 5</button>
+  <button class="button">Button 6</button>
+</div>
+
+<button class="accordion" onclick="openPanel()">Section 2</button>
+<div class="panel">
+  <button class="button">Button 1</button>
+  <button class="button">Button 2</button>
+  <button class="button">Button 3</button>
+  <button class="button">Button 4</button>
+</div>
+
+<button class="accordion" onclick="openPanel()">Section 3</button>
+<div class="panel">
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider"></span>
+  </label>
+
+  <label class="switch">
+    <input type="checkbox" checked>
+    <span class="slider"></span>
+  </label>
+  <label class="switch">
+  <input type="checkbox">
+  <span class="slider"></span>
+</label>
+
+<label class="switch">
+  <input type="checkbox" checked>
+  <span class="slider"></span>
+</label>
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider"></span>
+</label>
+
+<label class="switch">
+  <input type="checkbox" checked>
+  <span class="slider"></span>
+</label>
+</div>
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>Описание</h3>
+  <button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion" onclick="openPanel()">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion" onclick="openPanel()">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Поддержка</h3>
+  <button class="accordion" onclick="openPanel()">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion" onclick="openPanel()">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion" onclick="openPanel()">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>Темн</h3>
+<button onclick="myFunction()">Toggle dark mode</button>
+</div>

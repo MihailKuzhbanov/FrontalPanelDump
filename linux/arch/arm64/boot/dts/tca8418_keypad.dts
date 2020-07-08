@@ -1,0 +1,34 @@
+/dts-v1/;
+/plugin/;
+
+
+/{
+
+compatible = "brcm,bcm2708";
+
+fragment@0 {
+        target = <&i2c0>;
+        __overlay__{
+                #address-cells = <1>;
+                #size-cells = <0>;
+                status = "okay";
+
+                tca8418@34 {
+                compatible = "ti, tca8418";
+                reg = <0x34>;
+                irq-gpio = <&gpio 44 0x2>;
+                interrupts = <44 2>;
+                interrupt-parent = <&gpio>;
+                interrupt-controller;
+                        kypad,num-rows = <3>;
+                        keypad,num-columns = <10>;
+                        linux,keymap = <
+                        0x03080067      //UP
+                        0x0309006c      //DOWN
+                        0x04080069      //LEFT
+                        0x0409006a      //RIGHT
+                        >;
+                };
+        };
+};
+};
